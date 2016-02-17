@@ -1,0 +1,30 @@
+
+******************************
+    Migration
+******************************
+
+php artisan migrate
+php artisan make:migration create_flyers_table --create="flyers"
+php artisan make:migration create_flyers_photos_table --create="flyers_photos"
+
+******************************
+    Models
+******************************
+// Always make models singular which refers to tables in plural
+// User model has a users table.
+
+php artisan make:model Flyer
+    Note:
+        You could have made Model and Migrate at the same time:
+        php artisan make:model Flyer --migration
+        or
+        php artisan make:model Flyer -m
+
+        php artisan make:model Photo
+
+
+
+
+
+
+php artisan tinker

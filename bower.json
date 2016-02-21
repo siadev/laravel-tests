@@ -1,0 +1,13 @@
+{
+  "name": "simontests.dev",
+  "description": "Laravel tests",
+  "authors": [
+    "Simon Assouline <simon@siacom.com.au>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "jquery-ui": "jqueryui#^1.11.4",
+    "toastr": "^2.1.2"
+  }
+}

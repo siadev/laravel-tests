@@ -1,8 +1,20 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@import "partials/globals";
 @import "partials/forms";
+@import "partials/home-carousel";
+@import "partials/home-top-section";
+@import "partials/nav";
 
 body {
-  padding-top: 70px;
+  background-color: mintcream;
+}
+
+h2{
+  margin: 0;
+  color: #666;
+  padding-top: 90px;
+  font-size: 52px;
+  font-family: "trebuchet ms", sans-serif;
 }
 

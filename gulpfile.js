@@ -22,16 +22,22 @@ elixir(function(mix) {
     mix
         .sass('app.scss')
         .copy('public/css/app.css', 'resources/assets/css/app.css')
-        .scriptsIn('public/assets/js')              /*
+        // Note: copy node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js
+        //       TO   public/assets/js/bootstrap.min.js
+        .scripts(['home-carousel.js', 'test.js'], 'public/js/all.js')
+        /* .scriptsIn('resources/assets/js')        /*  ?? Don't work - Broken
                                                      * Place all JavaScript found in directory
-                                                     *      --->>> public/assets/js
+                                                     *      --->>> resources/assets/js
                                                      * into --->>> public/js/all.js
                                                      */
-        .styles(['app.css', 'plain.css', 'example.css'])
+        .styles(['app.css', 'toastr.min.css'])
                                                     /*
                                                      * Place all css filenames in array located in directory
                                                      *       --->>> resources/assets/css
                                                      * into  --->>> public/css/all.css
                                                      */
-       .version('css/all.css');
+       .version([
+           'css/all.css',
+           'js/all.js',
+       ])
 });

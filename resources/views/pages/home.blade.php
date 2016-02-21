@@ -1,4 +1,10 @@
-@extends('layout')
+@extends('layout', [
+                'page_title' => "Home Page"
+                ])
+
+@section('top-content')
+    @include('pages.home-carousel')
+@stop
 
 @section('content')
 

@@ -5749,10 +5749,332 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/*
+* UtilityBelt - a starter kit for any SASS project
+* By @dmtintner & @hackingui
+* Documentation and examples - hackingui.com/front-end/10-best-scss-utilities/
+* V1.1.0
+*/
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*/
+/*
+* Clearfix
+*/
+/*
+* Respond To
+*/
+/*
+* Ghost Vertical Align
+*/
+/*
+* Truncate Text
+*/
+/*
+* Animation
+*/
+/*
+* Alerted
+*/
+@-webkit-keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold; }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1); } }
+
+@keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold; }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1); } }
+
+/*
+* Resize Sprite - for resizing only a single image from a sprite
+*
+* params: $map = $<name>-sprites (ex. $icon-sprites)
+*         $sprite = file name w/o file type ending (ex. globe)
+          $percent = number (ex. 50)
+*
+* (if compass CSS3 mixins not included, uncomment the background-size row and comment the @include version)
+*/
+/*
+* Resizes all images in a given sprite
+* mixin courtesy of Wilker Lúcio https://gist.github.com/wilkerlucio/6442309
+* params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
+*/
+/*
+* HUI Tooltips
+*/
+/*
+## Text-align justify
+For perfectly aligned grids that don't rely on floating elements and difficult calculations
+
+- http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+.logo {
+  position: relative;
+  top: -7px; }
+
+.top-wrapper {
+  display: block; }
+
+.topbar-content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.topbar {
+  color: white;
+  background-color: #1e2d83;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: medium;
+  font-family: "source_sans", "Lucida Grande", "Lucida Sans", sans-serif; }
+
+/*
+ * Navigation custom rules.
+ * Also see this site for bootstrap changes:
+ * http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
+ */
+.nav-wrapper {
+  position: absolute;
+  top: 30px;
+  width: 90%;
+  z-index: 99; }
+
+.navbar {
+  border-radius: 0 !important;
+  padding-left: 20px;
+  padding-right: 50px; }
+
+.navbar-brand {
+  width: 300px; }
+
+.container {
+  width: 100%;
+  padding: 0; }
+
 .form-control {
   height: 39px; }
 
+.myCarousel {
+  margin: 0px;
+  padding: 0px; }
+
+.item {
+  background: #263873;
+  height: 450px !important; }
+
+.carousel {
+  margin-top: 0; }
+
+.carousel.carousel-fade .item {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /* ie fix */ }
+
+.carousel.carousel-fade .active.item {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* ie fix */ }
+
+.data-slide {
+  color: #0a0a0a;
+  background-color: #0a0a0a; }
+
+.carousel-caption {
+  color: #ffb836; }
+
+/*
+* UtilityBelt - a starter kit for any SASS project
+* By @dmtintner & @hackingui
+* Documentation and examples - hackingui.com/front-end/10-best-scss-utilities/
+* V1.1.0
+*/
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*/
+/*
+* Clearfix
+*/
+/*
+* Respond To
+*/
+/*
+* Ghost Vertical Align
+*/
+/*
+* Truncate Text
+*/
+/*
+* Animation
+*/
+/*
+* Alerted
+*/
+@-webkit-keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold; }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1); } }
+
+@keyframes alertMe {
+  from {
+    border-width: 3px;
+    border-color: gold; }
+  to {
+    border-width: 0;
+    border-color: rgba(255, 215, 0, 0.1); } }
+
+/*
+* Resize Sprite - for resizing only a single image from a sprite
+*
+* params: $map = $<name>-sprites (ex. $icon-sprites)
+*         $sprite = file name w/o file type ending (ex. globe)
+          $percent = number (ex. 50)
+*
+* (if compass CSS3 mixins not included, uncomment the background-size row and comment the @include version)
+*/
+/*
+* Resizes all images in a given sprite
+* mixin courtesy of Wilker Lúcio https://gist.github.com/wilkerlucio/6442309
+* params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
+*/
+/*
+* HUI Tooltips
+*/
+/*
+## Text-align justify
+For perfectly aligned grids that don't rely on floating elements and difficult calculations
+
+- http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+.navbar-default .navbar-nav .dropdown-header {
+  color: #bdbdbd;
+  background-color: #0b3e6f;
+  text-decoration: underline; }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; }
+
+/*
+ * Generated online
+ * Permalink:
+ * http://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0
+ * Site: http://work.smarchal.com/twbscolor/
+ * Also try: http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/
+ */
+.navbar-default {
+  background-color: #263873;
+  border: none;
+  margin: 0; }
+
+.navbar-default .navbar-brand {
+  color: #d7e4e8; }
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #a09a9a; }
+
+.navbar-default .navbar-text {
+  color: #d7e4e8; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #d7e4e8; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffb836; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #263873; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #d7e4e8; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ffb836;
+  background-color: #263873; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #263873; }
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #a09a9a;
+  background-color: #263873; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #a09a9a;
+  background-color: #263873; }
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffb836;
+  background-color: #263873; }
+
+.navbar-default .navbar-toggle {
+  border-color: #263873; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #263873; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #d7e4e8; }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #d7e4e8; }
+
+.navbar-default .navbar-link {
+  color: #d7e4e8; }
+
+.navbar-default .navbar-link:hover {
+  color: #ffb836; }
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #d7e4e8; }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #a09a9a; }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #a09a9a;
+    background-color: #263873; } }
+
 body {
-  padding-top: 70px; }
+  background-color: mintcream; }
+
+h2 {
+  margin: 0;
+  color: #666;
+  padding-top: 90px;
+  font-size: 52px;
+  font-family: "trebuchet ms", sans-serif; }
 
 /*# sourceMappingURL=app.css.map */

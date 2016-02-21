@@ -24,12 +24,14 @@ class FlyerRequest extends Request
     public function rules()
     {
         return [
-            'street' => 'required',
-            'city' => 'required',
-            'postcode' => 'required',
-            'state' => 'required',
-            'price' => 'required|integer',
+            'street'      => 'required',
+            'city'        => 'required',
+            'postcode'    => 'required',
+            'state'       => 'required',
+            'price'       => 'required|integer',
             'description' => 'required'
         ];
     }
+
+
 }

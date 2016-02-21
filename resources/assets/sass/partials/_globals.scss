@@ -1,0 +1,98 @@
+@import "mixins";
+
+.logo {
+  // Best way to move an image vertically up.
+  position: relative;
+  top: -7px;
+}
+.top-wrapper {
+  display: block;
+}
+
+.topbar-content {
+  @include vertical-align;
+}
+
+.topbar {
+  color: white;
+  background-color: #1e2d83;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: medium;
+  font-family: "source_sans", "Lucida Grande", "Lucida Sans", sans-serif ;
+}
+
+/*
+ * Navigation custom rules.
+ * Also see this site for bootstrap changes:
+ * http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
+ */
+.nav-wrapper {
+  position: absolute;
+  top: 30px;
+  width: 90%;
+  z-index:99;
+}
+.navbar {
+  @include no-rounded-corners;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+
+.navbar-brand {
+  width: 300px;
+}
+
+//.navbar-default {
+//  background-color: #263873;
+//  margin: 0;
+//  border: none;
+//}
+//
+///* title */
+//.navbar-default .navbar-brand {
+//  color: #ffffff;
+//}
+//
+///* Colour settings Brand or Logo link onHover */
+//.navbar-default .navbar-brand:hover,
+//.navbar-default .navbar-brand:focus {
+//  color: #ffb836;
+//}
+//
+///* Colour settings Normal navigation link */
+//.navbar-default .navbar-nav > li > a {
+//  color: #ffffff;
+//}
+//
+///*
+// * Colour settings for inactive menus on Hover
+// * This is the normal menus highlighted when hovered.
+// */
+//.navbar-default .navbar-nav > li > a:hover,
+//.navbar-default .navbar-nav > li > a:focus {
+//  color: #ffb836;
+//}
+//
+//
+///* Colour settings for active menu.
+// * This is the unique menu colour
+// * meaning the current page.
+// */
+//.navbar-default .navbar-nav > .active > a,
+//.navbar-default .navbar-nav > .active > a:hover,
+//.navbar-default .navbar-nav > .active > a:focus {
+//  color: #777777;
+//  background-color: #263873;
+//}
+//
+//
+//
+
+
+.container {
+  width: 100%;
+  padding: 0;
+}
+

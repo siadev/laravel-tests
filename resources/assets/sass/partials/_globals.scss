@@ -44,55 +44,23 @@
   width: 300px;
 }
 
-//.navbar-default {
-//  background-color: #263873;
-//  margin: 0;
-//  border: none;
-//}
-//
-///* title */
-//.navbar-default .navbar-brand {
-//  color: #ffffff;
-//}
-//
-///* Colour settings Brand or Logo link onHover */
-//.navbar-default .navbar-brand:hover,
-//.navbar-default .navbar-brand:focus {
-//  color: #ffb836;
-//}
-//
-///* Colour settings Normal navigation link */
-//.navbar-default .navbar-nav > li > a {
-//  color: #ffffff;
-//}
-//
-///*
-// * Colour settings for inactive menus on Hover
-// * This is the normal menus highlighted when hovered.
-// */
-//.navbar-default .navbar-nav > li > a:hover,
-//.navbar-default .navbar-nav > li > a:focus {
-//  color: #ffb836;
-//}
-//
-//
-///* Colour settings for active menu.
-// * This is the unique menu colour
-// * meaning the current page.
-// */
-//.navbar-default .navbar-nav > .active > a,
-//.navbar-default .navbar-nav > .active > a:hover,
-//.navbar-default .navbar-nav > .active > a:focus {
-//  color: #777777;
-//  background-color: #263873;
-//}
-//
-//
-//
+.carousel-control.right, .carousel-control.left {
+  background-image:none;
+}
 
+.main-content {
+  width: 100%;
+  padding: 0 50px;
+}
 
 .container {
   width: 100%;
   padding: 0;
+  margin: 0;
 }
 
+.footer-nav {
+  padding: 20px;
+  color: lime;
+  margin-top: 20px;
+ }

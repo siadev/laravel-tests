@@ -1,3 +1,35 @@
 .form-control {
   height: 39px;
 }
+
+.form-label {
+  width: 130px;
+}
+
+.flyer-label {
+  padding: 5px;
+  margin: 0;
+  @include alpha-background-color(rgba(#b2c1f1, 0.3), white);
+  font-weight: bold;
+}
+
+
+.form-panel {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 700px;
+}
+
+.group-field {
+  margin-left: 0;
+  margin-bottom: 15px;
+}
+
+.form-field-2col {
+  width: 200px !important;
+}
+.panel-body-form {
+  margin: 15px 0;
+  padding: 0;
+}

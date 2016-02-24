@@ -4,12 +4,13 @@
 }
 
 .item{
-  background: #263873;
   height: 450px !important;
 }
 
 .carousel{
   margin-top: 0;
+  padding-top: 50px;
+  background: #263873;
 }
 
 .carousel.carousel-fade .item {

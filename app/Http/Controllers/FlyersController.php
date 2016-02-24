@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Flyer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -37,10 +38,19 @@ class FlyersController extends Controller
      */
     public function store(Requests\FlyerRequest $request)
     {
-        // Validate the form
-        // persist the flyer (save)
-        // redirect to landing page
+        // Validate the form        -- ( About using php artisan make:reequest
+        //                               You find it in ..app/Requests directory )
+        // persist the flyer (save) -- Flyer::create($request->all());
 
+
+        Flyer::create($request->all());
+
+        // Flash messaging.
+        flash()->success('Successfully saved' , 'Flyer created');
+
+        // redirect to landing page -- for the same page use:
+        //                             return redirect()->back();
+        return redirect()->back();  // Back one to the form
     }
 
     /**

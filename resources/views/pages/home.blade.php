@@ -2,11 +2,9 @@
                 'page_title' => "Home Page"
                 ])
 
-@section('top-content')
-    @include('pages.home-carousel')
-@stop
 
-@section('content')
+@section('home-page')
+    @include('pages.home-carousel')
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">

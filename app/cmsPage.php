@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class cmsPage extends Model
 {
 
-    function cms_articles()
+    function cmsTemplate()
+    {
+        return $this->belongsTo('LaravelExamples\cmsTemplate');
+    }
+
+    function cmsArticle()
     {
         return $this->hasMany('LaravelExamples\cmsArticle');
     }

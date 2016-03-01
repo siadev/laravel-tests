@@ -5819,6 +5819,22 @@ button.close {
 For perfectly aligned grids that don't rely on floating elements and difficult calculations
 
 - http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+/* ------------------------------------------------------------------------------
+ *  Align middle vertically.
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Remove rounded corners. Used to remove bootstrap rounded frames
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Semi transparent mixin.
+ *   Link: http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Box shadow
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Code block mixin.
+ * ------------------------------------------------------------------------------ */
 .logo {
   position: relative;
   top: -7px; }
@@ -5840,6 +5856,9 @@ For perfectly aligned grids that don't rely on floating elements and difficult c
   text-align: center;
   font-size: medium;
   font-family: "source_sans", "Lucida Grande", "Lucida Sans", sans-serif; }
+
+.panel-body > .row {
+  margin-bottom: 20px; }
 
 /*
  * Navigation custom rules.
@@ -5865,7 +5884,8 @@ For perfectly aligned grids that don't rely on floating elements and difficult c
 
 .main-content {
   width: 100%;
-  padding: 0 50px; }
+  padding: 0 50px;
+  margin-top: 60px; }
 
 .container {
   width: 100%;
@@ -5874,6 +5894,7 @@ For perfectly aligned grids that don't rely on floating elements and difficult c
 
 .footer-nav {
   padding: 20px;
+  width: 100%;
   color: lime;
   margin-top: 20px; }
 
@@ -6006,6 +6027,22 @@ For perfectly aligned grids that don't rely on floating elements and difficult c
 For perfectly aligned grids that don't rely on floating elements and difficult calculations
 
 - http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+/* ------------------------------------------------------------------------------
+ *  Align middle vertically.
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Remove rounded corners. Used to remove bootstrap rounded frames
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Semi transparent mixin.
+ *   Link: http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Box shadow
+ * ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+ *  Code block mixin.
+ * ------------------------------------------------------------------------------ */
 .navbar-default .navbar-nav .dropdown-header {
   color: #bdbdbd;
   background-color: #0b3e6f;
@@ -6013,7 +6050,7 @@ For perfectly aligned grids that don't rely on floating elements and difficult c
 
 .dropdown:hover .dropdown-menu {
   display: block;
-  margin-top: 0; }
+  margin-top: -1px; }
 
 /*
  * Generated online
@@ -6107,6 +6144,67 @@ For perfectly aligned grids that don't rely on floating elements and difficult c
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #a09a9a;
     background-color: #263873; } }
+
+/*
+ * Styles for Online documentation
+ * @author    Simon Assouline
+ * @copyright (c) 2016 SIACOM, all rights reserved.
+*/
+.docs-info {
+  background-color: #a6b0d2;
+  background-color: rgba(32, 58, 143, 0.4); }
+
+.docs-links {
+  height: 400px; }
+
+div.docs-panel {
+  width: 1000px;
+  padding: 2px;
+  border: 1px solid #cccc2b;
+  margin: auto;
+  margin-bottom: 20px; }
+
+div.docs-panel:hover {
+  box-shadow: 0 0 5px rgba(24, 28, 53, 0.74); }
+
+div.docs-cli:hover {
+  box-shadow: 0 0 5px rgba(24, 28, 53, 0.74); }
+
+.docs-code {
+  padding: 10px;
+  background-color: #0a0a0a;
+  color: #fdf8ff;
+  font-family: Monaco, Consolas, Lucida Console, dejavu sans mono, monospace;
+  font-size: 14px;
+  border: 1px solid #fdf8ff; }
+
+.docs-code > span {
+  color: #eacd86; }
+
+.code-highlight {
+  color: #f25621; }
+
+.docs-cli {
+  padding: 10px;
+  background-color: #0a0a0a;
+  color: #fdf8ff;
+  font-family: Monaco, Consolas, Lucida Console, dejavu sans mono, monospace;
+  font-size: 14px;
+  border: 1px solid #fdf8ff; }
+
+.docs-cli > p {
+  color: #9fe5a0; }
+
+.docs-cli > p::before {
+  color: #4395ff;
+  content: ":~/ $ ";
+  font-weight: bold; }
+
+.docs-cli > span {
+  color: #eacd86; }
+
+.docs-bullet > li::after {
+  content: url("/img/buttons/next.png"); }
 
 .toast-title {
   font-weight: bold;

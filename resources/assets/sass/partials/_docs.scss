@@ -1,0 +1,74 @@
+/*
+ * Styles for Online documentation
+ * @author    Simon Assouline
+ * @copyright (c) 2016 SIACOM, all rights reserved.
+*/
+
+$note-color: #eacd86;
+
+.docs-info {
+  @include alpha-background-color(rgba(#203a8f, 0.4), white);
+}
+
+.docs-links {
+  height: 400px;
+}
+
+
+div.docs-panel {
+  width: 1000px;
+  padding: 2px;
+  border: 1px solid #cccc2b;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+div.docs-panel:hover {
+  @include docs-shadow;
+}
+
+div.docs-cli:hover {
+  @include docs-shadow ;
+}
+
+.docs-code {
+  @include docs-codeblock;
+}
+// Span will be note color.
+.docs-code > span {
+  color: $note-color;
+}
+
+.code-highlight {
+  color: #f25621;
+}
+.docs-cli {
+  @include docs-codeblock;
+}
+
+
+// P will be code lines suffixed with ~$
+.docs-cli > p {
+  color: #9fe5a0;
+}
+
+.docs-cli > p::before {
+  color: #4395ff;
+  content: ":~/ $ ";
+  font-weight: bold;
+}
+
+// Span will be note color.
+.docs-cli > span {
+  color: $note-color;
+}
+
+.docs-bullet {
+  // todo: set font and colors.
+}
+
+.docs-bullet > li::after {
+  content: url("/img/buttons/next.png");
+
+}
+

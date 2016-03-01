@@ -1,5 +1,6 @@
 @extends('layout', [
-                'page_title' => "Home Page"
+                'page_title'  => "Home Page",
+                'page_header' => "Welcome to newsite !"
                 ])
 
 

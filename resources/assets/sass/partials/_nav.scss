@@ -1,6 +1,8 @@
 
 $nav-hover-col: #ffb836;
 $nav-background: #263873;
+$nav-focus-color: #a09a9a;
+
 
 .navbar-default .navbar-nav .dropdown-header {
   color: #bdbdbd;
@@ -11,7 +13,7 @@ $nav-background: #263873;
  // Drop the Dropdown on hover.
 .dropdown:hover .dropdown-menu {
   display: block;
-  margin-top: 0; // remove the gap so it doesn't close
+  margin-top: -1px; // remove the gap top of dropdown.
 }
 
 /*
@@ -34,7 +36,7 @@ $nav-background: #263873;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #a09a9a;
+  color: $nav-focus-color;
 }
 .navbar-default .navbar-text {
   color: #d7e4e8;
@@ -63,13 +65,13 @@ $nav-background: #263873;
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-  color: #a09a9a;
+  color: $nav-focus-color;
   background-color: $nav-background;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #a09a9a;
+  color: $nav-focus-color;
   background-color: $nav-background;
 }
 .navbar-default .navbar-nav > .open > a,
@@ -105,12 +107,12 @@ $nav-background: #263873;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #a09a9a;
+    color: $nav-focus-color;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #a09a9a;
+    color: $nav-focus-color;
     background-color: $nav-background;
   }
 }

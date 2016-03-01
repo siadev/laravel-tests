@@ -11,10 +11,16 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('pages.home');
 });
 
+// phpDocumentor generated files.place in the public folder.
+// removed and replaced with route.
+//Route::get('/phpdocs', function() {
+//    return File::get(public_path() . '/phpdocs/index.html');
+//});
 
 
 
@@ -30,6 +36,30 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
+
+    /* Flyers Controller
+     *   Side note: Adding new methods to a resource controller.
+     *              See below, Routes to other nodes in URI
+     *              Add a route to that controller's method separately,
+     *              *** ==> before you register the resource <== ***
+     */
     Route::resource('flyers', 'FlyersController');
+
+    Route::get('flyers/{postcode}/{street}', 'FlyersController@byPostcodeStreet');
+
+    Route::get('docs/{name?}', function ($name=null) {
+        if ( !$name == NULL )
+        {
+            return view('docs.' . $name);
+        }
+        else {
+            return view('docs.index');
+        }
+    });
     Route::resource('docs', 'DocsController');
+
+
 });
+
+
+

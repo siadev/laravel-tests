@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace LaravelExamples\Http\Controllers;
 
-use App\Flyer;
+use LaravelExamples\Flyer;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use LaravelExamples\Http\Requests;
+use LaravelExamples\Http\Controllers\Controller;
 
 class FlyersController extends Controller
 {
@@ -48,9 +48,18 @@ class FlyersController extends Controller
         // Flash messaging.
         flash()->success('Successfully saved' , 'Flyer created');
 
+        flash()->overlay('Successfully saved' , 'Flyer created', 'success');
+
         // redirect to landing page -- for the same page use:
         //                             return redirect()->back();
         return redirect()->back();  // Back one to the form
+    }
+
+    public function byPostcodeStreet($postcode, $street) {
+
+        $flyer = Flyer::locatedAt($postcode, $street)->first();
+
+        return view('flyers.by_postcode_and_street', compact('flyer'));
     }
 
     /**
@@ -61,7 +70,8 @@ class FlyersController extends Controller
      */
     public function show($id)
     {
-        //
+        $var = Flyer::find($id);
+        return $var;
     }
 
     /**

@@ -1,10 +1,10 @@
 @extends('layout', [
-                'page_title' => "Home Page"
+                'page_title'   => " Display flyer",
+                'page_header' => "Create your Flyer"
                 ])
 
+
 @section('content')
-    <h3>Create your Flyer</h3>
-    <hr>
     <div class="container">
         <div class="panel panel-info form-panel" >
             <div class="panel-heading">
@@ -26,11 +26,28 @@
         var msg='<img src="/img/line600.gif"><p>';
 
         @foreach ($errors->all() as $error)
+            @if ( substr($error, 0, 16) == "The place format" )
+                $error = "The place field has an invalid value. See help to choose."
+               msg += '<img src="/img/icons/decline.gif"> ' + $error + '<p></p>';
+           @else
                 msg += '<img src="/img/icons/decline.gif"> {{ $error }} <p></p>';
+            @endif
+
         @endforeach
             showError(msg , 'The following fields need to be fixed:');
         @endif
     </script>
 
+    @if (session()->has('flash_message_overlay'))
+        <script>
+            swal({
+                title:  "{{ session('flash_message_overlay.title') }}",
+                text:   "{{ session('flash_message_overlay.message') }}",
+                type:   "{{ session('flash_message_overlay.alert') }}",
+                timer:  1700,
+                confirmButtonText: 'okay'
+            });
+        </script>
+    @endif
 @stop
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\tools;
+namespace LaravelExamples\Http\tools;
 
 /**
  * Countries

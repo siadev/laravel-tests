@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace LaravelExamples\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use LaravelExamples\Http\Requests;
+use LaravelExamples\Http\Controllers\Controller;
 
 class DocsController extends Controller
 {
@@ -19,10 +19,6 @@ class DocsController extends Controller
         return view('docs.index');
     }
 
-    public function sass()
-    {
-        return view('docs.sass');
-    }
     /**
      * Show the form for creating a new resource.
      *

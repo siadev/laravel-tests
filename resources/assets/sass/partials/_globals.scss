@@ -23,6 +23,12 @@
   font-family: "source_sans", "Lucida Grande", "Lucida Sans", sans-serif ;
 }
 
+.panel-body > .row {
+  margin-bottom: 20px;
+}
+
+
+
 /*
  * Navigation custom rules.
  * Also see this site for bootstrap changes:
@@ -51,6 +57,7 @@
 .main-content {
   width: 100%;
   padding: 0 50px;
+  margin-top: 60px;
 }
 
 .container {
@@ -60,7 +67,10 @@
 }
 
 .footer-nav {
+  //position: absolute;
+  //bottom: 0;
   padding: 20px;
+  width: 100%;
   color: lime;
   margin-top: 20px;
  }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace LaravelExamples;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +12,6 @@ class Photo extends Model
 
     public function flyer()
     {
-        return $this->belongsTo('App\Flyer');
+        return $this->belongsTo('LaravelExamples\Flyer');
     }
 }

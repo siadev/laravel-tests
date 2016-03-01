@@ -16,6 +16,7 @@ class CreateFlyersTable extends Migration
             $table->increments('id');
             $table->string('street');
             $table->string('city');
+            $table->enum('place', [ 'uk', 'fr', 'au']);
             $table->string('postcode', 5);
             $table->string('state', 40);
             $table->string('country',40);

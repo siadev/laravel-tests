@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Requests;
+namespace LaravelExamples\Http\Requests;
 
-use App\Http\Requests\Request;
+use LaravelExamples\Flyer;
+use LaravelExamples\Http\Requests\Request;
 
 class FlyerRequest extends Request
 {
@@ -23,13 +24,17 @@ class FlyerRequest extends Request
      */
     public function rules()
     {
+        $place_validation = Flyer::getPlacesStr();
+//      todo: remove this comment.
+//        dd($place_validation);
         return [
             'street'      => 'required',
             'city'        => 'required',
             'postcode'    => 'required',
             'state'       => 'required',
             'price'       => 'required|integer',
-            'description' => 'required'
+            'description' => 'required',
+            'place'       => ['regex:(uk|fr|au)']
         ];
     }
 

@@ -1,10 +1,10 @@
 {{--
     Provide Blade injection to shorten the namespace path to "countries"
     Which can then be accessed with $countries::all() as an example.
-    much easier lower down than typping App\Http\Tools\Countries.
+    much easier lower down than typping LaravelExamples\Http\Tools\Countries.
     So Blade injection allow you to directly access a class.
  --}}
-@inject('countries', 'App\Http\Tools\Countries')
+@inject('countries', 'LaravelExamples\Http\Tools\Countries')
 
 {{ csrf_field() }}
 
@@ -85,6 +85,16 @@
     </div>
 </div> {{-- Description --}}
 
+<div class="form-group group-field">
+    <div class="input-group">
+        <span class="input-group-addon flyer-label">
+            <label for="place"
+                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;uk, fr, au</label>
+        </span>
+        <input type="text" name="place" id="place"
+               class="form-control" value="{{ old('place') }}" required>
+    </div>
+</div> {{-- city --}}
 
 <div class="form-group" style="text-align: right">
     <button type="submit" class="btn btn-primary">Submit Request</button>

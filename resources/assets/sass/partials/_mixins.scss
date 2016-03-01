@@ -1,6 +1,8 @@
 @import "utility-belt";
 
-// ------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------
+ *  Align middle vertically.
+ * ------------------------------------------------------------------------------ */
 @mixin vertical-align {
   position: relative;
   top: 50%;
@@ -8,17 +10,20 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-// ------------------------------------------------------------------------------
 
-// ------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------
+ *  Remove rounded corners. Used to remove bootstrap rounded frames
+ * ------------------------------------------------------------------------------ */
 @mixin no-rounded-corners {
 -webkit-border-radius: 0 !important;
 -moz-border-radius: 0 !important;
 border-radius: 0 !important;
 }
-// ------------------------------------------------------------------------------
 
-// ------------------------------------------------------------------------------
+/* ------------------------------------------------------------------------------
+ *  Semi transparent mixin.
+ *   Link: http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
+ * ------------------------------------------------------------------------------ */
 @mixin alpha-background-color($color, $background) {
   $percent: alpha($color) * 100%;
   $opaque: opacify($color, 1);
@@ -26,4 +31,24 @@ border-radius: 0 !important;
   background-color: $solid-color;
   background-color: $color;
 }
-// ------------------------------------------------------------------------------
+
+/* ------------------------------------------------------------------------------
+ *  Box shadow
+ * ------------------------------------------------------------------------------ */
+@mixin docs-shadow {
+  -moz-box-shadow: 0 0 5px rgba(24, 28, 53, 0.74);
+  -webkit-box-shadow: 0 0 5px rgba(24, 28, 53, 0.74);
+  box-shadow: 0 0 5px rgba(24, 28, 53, 0.74);
+}
+
+/* ------------------------------------------------------------------------------
+ *  Code block mixin.
+ * ------------------------------------------------------------------------------ */
+@mixin docs-codeblock {
+  padding: 10px;
+  background-color: #0a0a0a;
+  color: #fdf8ff;
+  font-family: Monaco, Consolas, Lucida Console, dejavu sans mono, monospace;
+  font-size: 14px;
+  border: 1px solid #fdf8ff;
+}

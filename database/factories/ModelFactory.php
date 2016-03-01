@@ -12,7 +12,7 @@
 */
 $localisedFaker = Faker\Factory::create("en_AU");
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(LaravelExamples\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
@@ -21,7 +21,20 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Flyer::class, function (Faker\Generator $faker) {
+$factory->define(LaravelExamples\Flyer::class, function (Faker\Generator $faker) {
+    return [
+        'street'      => $faker->streetAddress,
+        'city'        => $faker->city,
+        'postcode'    => $faker->postcode,
+        'state'       => $faker->state,
+        'country'     => $faker->country,
+        'price'       => $faker->numberBetween(10000, 5000000),
+        'description' => $faker->paragraph(3),
+    ];
+});
+
+
+$factory->define(LaravelExamples\cms_page::class, function (Faker\Generator $faker) {
     return [
         'street'      => $faker->streetAddress,
         'city'        => $faker->city,

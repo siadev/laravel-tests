@@ -1,6 +1,6 @@
 @extends('layout', [
                 'page_title'   => " Display flyer",
-                'page_header' => "{{ $flyer->street }}"
+                'page_header'  => " $flyer->street "
                 ])
 
 @section('content')

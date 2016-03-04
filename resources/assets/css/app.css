@@ -5865,12 +5865,6 @@ For perfectly aligned grids that don't rely on floating elements and difficult c
  * Also see this site for bootstrap changes:
  * http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
  */
-.nav-wrapper {
-  position: absolute;
-  top: 30px;
-  width: 90%;
-  z-index: 99; }
-
 .navbar {
   border-radius: 0 !important;
   padding-left: 20px;
@@ -6399,5 +6393,13 @@ h2 {
   padding-top: 90px;
   font-size: 52px;
   font-family: "trebuchet ms", sans-serif; }
+
+.page-header {
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 0;
+  margin-left: 25px;
+  font-family: fantasy;
+  font-size: 16px; }
 
 /*# sourceMappingURL=app.css.map */

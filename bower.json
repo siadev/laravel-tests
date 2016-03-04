@@ -8,6 +8,7 @@
   "dependencies": {
     "jquery": "^2.2.0",
     "jquery-ui": "jqueryui#^1.11.4",
-    "toastr": "^2.1.2"
+    "toastr": "^2.1.2",
+    "dropzone": "^4.3.0"
   }
 }

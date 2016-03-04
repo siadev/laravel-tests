@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use LaravelExamples\Http\Requests;
 use LaravelExamples\Http\Controllers\Controller;
+use LaravelExamples\Photo;
 
 class FlyersController extends Controller
 {
@@ -58,7 +59,6 @@ class FlyersController extends Controller
     public function byPostcodeStreet($postcode, $street) {
 
         $flyer = Flyer::locatedAt($postcode, $street)->first();
-
         return view('flyers.by_postcode_and_street', compact('flyer'));
     }
 
@@ -70,8 +70,20 @@ class FlyersController extends Controller
      */
     public function show($id)
     {
-        $var = Flyer::find($id);
-        return $var;
+        $flyer = Flyer::find($id);
+        return view('flyers.show',  compact('flyer'));
+    }
+
+    public function addPhoto($id, Request $request) {
+        $this->validate($request, [ 'file' => 'required|mimes:jpg,jpeg,png,bmp,gif' ]);
+
+        $photo = Photo::fromForm($request->file('file'));
+
+        Flyer::find($id)->addPhoto($photo);
+
+        flash()->overlay('Successfully saved' , 'Photos have been saved', 'success');
+
+        return "Photos Uploaded";
     }
 
     /**

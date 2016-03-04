@@ -1,6 +1,5 @@
 <?php
-
-/*
+/**
 |--------------------------------------------------------------------------
 | Routes File
 |--------------------------------------------------------------------------
@@ -16,11 +15,25 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-// phpDocumentor generated files.place in the public folder.
-// removed and replaced with route.
-//Route::get('/phpdocs', function() {
-//    return File::get(public_path() . '/phpdocs/index.html');
-//});
+
+// _doc Implicit Binding
+// _note usage: http://simontests.dev/pages/1/
+Route::get('pages/{cmsPage}', function(LaravelExamples\cmsPage $cmsPage) {
+    dd($cmsPage);
+});
+// _note usage: http://simontests.dev/pages/1/articles/1
+Route::get('pages/{cmsPage}/articles/{cmsArticle}', function(LaravelExamples\cmsPage $cmsPage,
+                                                     LaravelExamples\cmsArticle $cmsArticle) {
+    $page= LaravelExamples\cmsPage::find($cmsPage->id);
+    $articles = LaravelExamples\cmsArticle::where('page_id', $page->id);
+    dd($articles);
+});
+
+/** _doc How to access files directly within the public directory.
+Route::get('/phpdocs', function() {
+    return File::get(public_path() . '/phpdocs/index.html');
+});
+ */
 
 
 
@@ -38,14 +51,13 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
 
     /* Flyers Controller
-     *   Side note: Adding new methods to a resource controller.
-     *              See below, Routes to other nodes in URI
-     *              Add a route to that controller's method separately,
-     *              *** ==> before you register the resource <== ***
+     *   _note: Adding new methods to a resource controller.
+     *          Add a route to that controller's method separately,
+     *          *** ==> before you register the resource <== ***
      */
     Route::resource('flyers', 'FlyersController');
-
-    Route::get('flyers/{postcode}/{street}', 'FlyersController@byPostcodeStreet');
+//    Route::get('/flyers/{postcode}/{street}', 'FlyersController@byPostcodeStreet');
+    Route::post('flyers/{id}/save-photo', 'FlyersController@addPhoto');
 
     Route::get('docs/{name?}', function ($name=null) {
         if ( !$name == NULL )
@@ -56,7 +68,6 @@ Route::group(['middleware' => ['web']], function () {
             return view('docs.index');
         }
     });
-    Route::resource('docs', 'DocsController');
 
 
 });

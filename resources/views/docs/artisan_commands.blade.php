@@ -13,7 +13,17 @@
                 <p>php artisan migrate</p>
                 <p>php artisan make:migration create_flyers_table --create="flyers"</p>
                 <p>php artisan make:migration create_flyers_photos_table --create="flyers_photos"</p>
+                <span>Seeding - Creating</span>
+                <p>php artisan make:seeder cmsPagesTable</p>
+                <p>php artisan make:seeder cmsTemplatesTable</p>
+                <p>php artisan make:seeder cmsArticlesTable</p>
+                <p>php artisan make:seeder FlyersTable</p>
+                <span>Seeding - Deployment</span>
+                <p>php artisan db:seed</p>
+                <span>Refresh and Reset migrations as well as seeding</span>
+                <p>php artisan migrate:refresh --seed </p>
             </div>
+
             <p>&nbsp;</p>
             <div class="panel-footer">
                 <p>Links</p>
@@ -45,7 +55,7 @@
                 </span>
                 <p>php artisan make:model cmsArticle -m  </p>
                 <p>php artisan make:model cmsPage -m</p>
-                <p>php artisan make:model cmsTemplates -m</p>
+                <p>php artisan make:model cmsTemplate -m</p>
                 <p>php artisan make:model cmsMenu -m</p>
             </div>
 

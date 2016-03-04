@@ -33,18 +33,22 @@ class Flyer extends Model
     ];
 
     /**
-     * Scope query to those located at a given address
-     * @param  string $query
+     * Find the flyer at the given address
      * @param  string $postcode
      * @param  string $street
      * @return $query
      */
-    public function scopeLocatedAt($query, $postcode, $street)
+    public static function LocatedAt($postcode, $street)
     {
         $street = str_replace('-', ' ', $street);
 
-        return $query->where(compact('postcode', 'street'));
+        return static::where(compact('postcode', 'street'))->first();
 
+    }
+
+    public function addPhoto(Photo $photo)
+    {
+        return $this->photos()->save($photo);
     }
 
     public function getPriceAttribute($price)

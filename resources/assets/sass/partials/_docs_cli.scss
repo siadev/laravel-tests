@@ -1,0 +1,44 @@
+.docs-cli {
+  //noinspection SassScssResolvedByNameOnly
+  @include docs-codeblock;
+}
+
+
+// P will be code lines suffixed with ~$
+.docs-cli > p {
+  color: #9fe5a0;
+  white-space: nowrap;
+  background-color: inherit;
+}
+
+.docs-cli > p::before {
+  color: #4395ff;
+  content: ":~/ $ ";
+  font-weight: bold;
+}
+
+// Span will be note color.
+.docs-cli > span {
+  color: $note-color;
+  padding: 5px;
+}
+
+.docs-cli > summary {
+  //noinspection SassScssResolvedByNameOnly
+  @include docs-summary;
+}
+
+.docs-cli > summary > b {
+  color: #007300;
+}
+
+.docs-cli > p:hover {
+  font-size: 16px;
+  margin-left: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: inline-block;
+  padding-right: 10px;
+
+}
+
+

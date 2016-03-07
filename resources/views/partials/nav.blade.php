@@ -1,3 +1,4 @@
+<!--suppress HtmlUnknownTarget -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -21,7 +22,7 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    <a href="/docs" class="dropdown-toggle" data-toggle="dropdown"
                        role="button" aria-haspopup="true" aria-expanded="false">
                         Documentation
                         <span class="caret"></span></a>
@@ -39,8 +40,14 @@
 
                         <li role="separator" class="divider"></li>
                         <li><a href="/docs/laravelkb">Laravel Knowledge Base</a></li>
-                        <li role="separator" class="divider"></li>
 
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Linux and Web Server configurations</li>
+                        <li><a href="/docs/nginx_deployment">nginx Deployment</a></li>
+                        <li><a href="/docs/command_line"
+                               title="Commands used on this site, for all web related installations"
+                               name="Commands used on this site, for all web related installations">
+                                Command Line Instructions (CLI)</a></li>
                     </ul>
                 </li>
 
@@ -76,7 +83,21 @@
                     </ul>
                 </li>
                 <li><a href="#">Pricing</a></li>
-                <li><a href="#">Login</a></li>
+                <!-- Authentication Links -->
+                @if (Auth::guest())
+                    <li><a href="{{ url('/login') }}">Login</a></li>
+                    <li><a href="{{ url('/register') }}">Register</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                @endif
             </ul>
         </div><!--/.nav-collapse Features menu-->
     </div>

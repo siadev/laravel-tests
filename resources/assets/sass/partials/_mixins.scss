@@ -42,7 +42,7 @@ border-radius: 0 !important;
 }
 
 /* ------------------------------------------------------------------------------
- *  Code block mixin.
+ *  Default font configuration for documentation code blocks.
  * ------------------------------------------------------------------------------ */
 @mixin docs-codeblock {
   padding: 10px;
@@ -51,4 +51,19 @@ border-radius: 0 !important;
   font-family: Monaco, Consolas, Lucida Console, dejavu sans mono, monospace;
   font-size: 14px;
   border: 1px solid #fdf8ff;
+}
+
+/* ------------------------------------------------------------------------------
+ *  Mixin for summary tags to docs sections. usage @include docs-summary
+ * ------------------------------------------------------------------------------ */
+@mixin docs-summary {
+  background: rgba(207, 255, 250, 0.8) url('/img/icons/info.png') no-repeat;
+  color: #274886;
+  border: 1px dotted;
+  padding: 4px 2px 2px 35px;
+  margin-left: 45px;
+  width: 95%;
+  font-family: "DejaVu Sans Light", fantasy;
+  font-style: italic;
+  min-height: 26px;
 }

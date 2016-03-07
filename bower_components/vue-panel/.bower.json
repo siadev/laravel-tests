@@ -1,0 +1,39 @@
+{
+  "name": "vue-panel",
+  "main": "index.js",
+  "version": "3.1.0",
+  "homepage": "https://github.com/ericmcdaniel/vue-panel",
+  "authors": [
+    "Eric McDaniel <eric.g.mcdaniel@gmail.com>"
+  ],
+  "description": "Suite of Vue components for building Flexbox layouts",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "vue",
+    "vuejs",
+    "components",
+    "flexbox",
+    "panel"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "3.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.1.0",
+    "commit": "6a2128dd4c644040f961fbe99f694e6051d602af"
+  },
+  "_source": "git://github.com/ericmcdaniel/vue-panel.git",
+  "_target": "^3.1.0",
+  "_originalSource": "vue-panel",
+  "_direct": true
+}

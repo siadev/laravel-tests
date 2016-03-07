@@ -6,7 +6,13 @@
 @import "partials/home-top-section";
 @import "partials/nav";
 @import "partials/docs";
+@import "partials/docs_code";
+@import "partials/docs_cli";
 @import "partials/toastr";
+@import "partials/error_container";
+@import "fontawesome/font-awesome";
+@import "partials/modal-messages";
+@import "animate-sass/animate";
 
 $dropdown-divider-bg: #181c35 !important;
 

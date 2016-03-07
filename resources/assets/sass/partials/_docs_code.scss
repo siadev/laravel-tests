@@ -1,0 +1,23 @@
+.docs-code {
+  //noinspection SassScssResolvedByNameOnly
+  @include docs-codeblock;
+}
+// Span will be note color.
+.docs-code > span {
+  color: $note-color;
+  padding: 5px;
+}
+
+.docs-code > summary {
+  //noinspection SassScssResolvedByNameOnly
+  @include docs-summary;
+  margin-bottom: 10px;
+}
+
+.docs-code > summary > b {
+  color: #007300;
+}
+
+.code-highlight {
+  color: #f25621;
+}

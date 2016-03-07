@@ -9,14 +9,14 @@
             <div class="panel-body docs-info">
                 <p>SQLite is a flat file database store one of the site's directory.</p>
                 <div class="docs-cli">
-                    <span>Make sure you have the driver before you start.</span>
+                    <summary>Make sure you have the driver before you start.</summary>
                     <p>sudo apt-get install -y php5-sqlite</p>
                     <p>cd /srv/www/newsite</p>
-                    <span>Create the SQLite empty file where you want it.</span>
+                    <summary>Create the SQLite empty file where you want it.</summary>
                     <p>touch database/db.sqlite</p>
-                    <span>Now you can migrate</span>
+                    <summary>Now you can migrate</summary>
                     <p>php artisan migrate</p>
-                    <span>in Ubuntu you can install SQLite database browser package</span>
+                    <summary>in Ubuntu you can install SQLite database browser package</summary>
 
                 </div>
             </div>

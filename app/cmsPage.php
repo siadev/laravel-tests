@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class cmsPage extends Model
 {
+    protected $fillable = [
 
+];
 
     /*
      *  _doc calling model array classes

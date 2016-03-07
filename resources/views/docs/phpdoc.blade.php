@@ -13,35 +13,35 @@
                         and copy it to an accessible directory. I use ~/tools
                     </p>
                     <div class="docs-cli">
-                        <span>
+                        <summary>
                             Before we start using phpDocumentor
                             make sure you have these three packages.  <br>
                             1) PHP 5.x (Off course)   <br>
                             2) intl extension for PHP <br>
                             3) Graphviz
-                        </span>
+                        </summary>
                         <p>sudo apt-get install php5-intl</p>
                         <p>sudo apt-get install Graphviz</p>
-                        <span>When all downloads are finished:</span>
+                        <summary>When all downloads are finished:</summary>
                         <p>mkdir tools</p>
                         <p>cp ~/Downloads/phpDocumentor.phar ~/tools</p>
                         <p>vim ~/.bashrc</p>
-                        <span>Add an Alias.</span>
+                        <summary>Add an Alias.</summary>
                         <p>alias phpdoc="~/tools/phpDocumentor.phar"</p>
-                        <span>Make sure permissions are set correctly.</span>
+                        <summary>Make sure permissions are set correctly.</summary>
                         <p>sudo chmod 777 ~/tools/phpDocumentor.phar</p>
 
-                        <span>Open a new terminal window and try it out.</span>
+                        <summary>Open a new terminal window and try it out.</summary>
                         <p><b>cd /srw/www/newsite/public</b></p>
-                        <span>Create a destination folder within your site</span>
+                        <summary>Create a destination folder within your site</summary>
                         <p>mkdir phpdocs</p>
-                        <span><b>Option one:</b> One file to phpdocs directory</span>
+                        <summary><b>Option one:</b> One file to phpdocs directory</summary>
                         <p>phpdoc -f app/User.php -t phpdoc</p>
-                        <span><b>Option two (preferred):</b> Directory and below to phpdocs directory</span>
+                        <summary><b>Option two (preferred):</b> Directory and below to phpdocs directory</summary>
                         <p>phpdoc -d /srv/www/newsite/app -t phpdocs</p>
-                        <span>Now edit the route file so you can include it in your view (DEV ONLY!!)</span>
+                        <summary>Now edit the route file so you can include it in your view (DEV ONLY!!)</summary>
                         <p>vim /srv/www/newsite/app/Http/routes.php</p>
-                        <span>Insert this route</span>
+                        <summary>Insert this route</summary>
                         <pre class="docs-code">
     // phpDocumentor generated files.place in the public folder.
     Route::get('/phpdocs', function() {

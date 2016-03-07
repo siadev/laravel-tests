@@ -11,7 +11,7 @@ class Photo extends Model
 
     protected $fillable = ['path'];
 
-    protected $baseDir = 'flyers/photos';  // _review not in use yet
+    protected $baseDir = 'uploaded/photos';  // _review not in use yet
 
     public static function fromForm(UploadedFile $file)
     {
@@ -21,7 +21,7 @@ class Photo extends Model
         // could use: $photo->path = $photo->baseDir . '/' . $name_mod
         $photo->path = $name_mod;
 
-        $file->move($photo->baseDir, $name_mod);
+        $file->move($photo->baseDir, $name_mod); // should be in controller
 
         return $photo;
     }

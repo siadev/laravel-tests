@@ -11,7 +11,7 @@
                 Adding new methods to an existing Laravel resource. for new links.
             </p>
             <pre class="docs-code">
-    <span>Just add a route to that method separately, <b>before</b> you register the resource:</span>
+    <summary>Just add a route to that method separately, <b>before</b> you register the resource:</summary>
     Route::get('docs/sass',    'DocsController@sass');
     Route::get('docs/artisan', 'DocsController@artisan');
     Route::get('docs/phpdoc',  'DocsController@phpdoc');

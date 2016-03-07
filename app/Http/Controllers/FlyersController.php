@@ -11,6 +11,17 @@ use LaravelExamples\Photo;
 
 class FlyersController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -34,20 +45,18 @@ class FlyersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request|Requests\FlyerRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(Requests\FlyerRequest $request)
     {
-        // Validate the form        -- ( About using php artisan make:reequest
+        // Validate the form        -- ( About using php artisan make:request
         //                               You find it in ..app/Requests directory )
         // persist the flyer (save) -- Flyer::create($request->all());
 
-
         Flyer::create($request->all());
 
-        // Flash messaging.
-        flash()->success('Successfully saved' , 'Flyer created');
+//        flash()->success('Successfully saved' , 'Flyer created');
 
         flash()->overlay('Successfully saved' , 'Flyer created', 'success');
 
@@ -119,4 +128,5 @@ class FlyersController extends Controller
     {
         //
     }
+
 }

@@ -11,10 +11,6 @@
 */
 
 
-Route::get('/', function () {
-    return view('pages.home');
-});
-
 
 // _doc Implicit Binding
 // _note usage: http://simontests.dev/pages/1/
@@ -22,12 +18,13 @@ Route::get('pages/{cmsPage}', function(LaravelExamples\cmsPage $cmsPage) {
     dd($cmsPage);
 });
 // _note usage: http://simontests.dev/pages/1/articles/1
-Route::get('pages/{cmsPage}/articles/{cmsArticle}', function(LaravelExamples\cmsPage $cmsPage,
-                                                     LaravelExamples\cmsArticle $cmsArticle) {
-    $page= LaravelExamples\cmsPage::find($cmsPage->id);
-    $articles = LaravelExamples\cmsArticle::where('page_id', $page->id);
-    dd($articles);
-});
+Route::get('pages/{cmsPage}/articles/{cmsArticle}',
+    function(LaravelExamples\cmsPage $cmsPage,
+        LaravelExamples\cmsArticle $cmsArticle) {
+        $page= LaravelExamples\cmsPage::find($cmsPage->id);
+        $articles = LaravelExamples\cmsArticle::where('page_id', $page->id);
+        dd($articles);
+    });
 
 /** _doc How to access files directly within the public directory.
 Route::get('/phpdocs', function() {
@@ -48,15 +45,25 @@ Route::get('/phpdocs', function() {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('/', function () {
+        return view('pages.home');
+    });
+
+    Route::get('/home', 'HomeController@index');
+
+    Route::resource('cms/templates', 'CmsTemplateController');
+    Route::resource('cms/pages', 'CmsPageController');
 
     /* Flyers Controller
-     *   _note: Adding new methods to a resource controller.
-     *          Add a route to that controller's method separately,
-     *          *** ==> before you register the resource <== ***
-     */
+ *   _note: Adding new methods to a resource controller.
+ *          Add a route to that controller's method separately,
+ *          *** ==> before you register the resource <== ***
+ */
     Route::resource('flyers', 'FlyersController');
-//    Route::get('/flyers/{postcode}/{street}', 'FlyersController@byPostcodeStreet');
+
+    Route::get('/flyers/{postcode}/{street}', 'FlyersController@byPostcodeStreet');
     Route::post('flyers/{id}/save-photo', 'FlyersController@addPhoto');
 
     Route::get('docs/{name?}', function ($name=null) {
@@ -68,9 +75,4 @@ Route::group(['middleware' => ['web']], function () {
             return view('docs.index');
         }
     });
-
-
 });
-
-
-

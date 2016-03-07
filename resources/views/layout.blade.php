@@ -38,8 +38,6 @@
                for beta testers.</p>
         </div>
     </div>
-
-
 </div>
 
 @yield('scripts')

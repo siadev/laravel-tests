@@ -20,7 +20,7 @@
     <div class="col-md-9">
 
         @foreach($flyer->photos as $photo)
-            <img src="/flyers/photos/{{ $photo->path }}"> &nbsp;
+            <img src="/uploaded/photos/{{ $photo->path }}"> &nbsp;
         @endforeach
     </div>
 

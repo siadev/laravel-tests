@@ -8,93 +8,81 @@
 
 {{ csrf_field() }}
 
-<div class="form-group group-field">
-    <div class="input-group">
-        <span class="input-group-addon flyer-label">
-            <label for="street"
-                   class="form-label glyphicon glyphicon-road text-left">&nbsp;Street:</label>
-        </span>
-        <input type="text" name="street" id="street"
-               class="form-control" value="{{ old('street') }}" required>
-    </div>
+<div class="input-group group-field">
+    <label class="input-group-addon flyer-label" for="street">
+        <i class="fa fa-home"></i>
+    </label>
+
+    <input type="text" name="street" id="street"
+           class="form-control" value="{{ old('street') }}" placeholder="Street">
+
 </div> {{-- Street --}}
 
-<div class="form-group group-field">
-    <div class="input-group">
-        <span class="input-group-addon flyer-label">
-            <label for="city"
-                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;City:</label>
-        </span>
-        <input type="text" name="city" id="city"
-               class="form-control" value="{{ old('city') }}" required>
-    </div>
-</div> {{-- city --}}
+<div class="input-group group-field">
+    <label for="city" class="input-group-addon flyer-label">
+        <i class="fa fa-building"></i>
+    </label>
 
-<div class="form-group group-field">
-    <div class="input-group">
-        <span class="input-group-addon flyer-label">
-            <label for="state"
-                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;State:</label>
-        </span>
-        <input type="text" name="state" id="state"
-               class="form-control form-field-2col" value="{{ old('state') }}" required>
+    <input type="text" name="city" id="city"
+           class="form-control" value="{{ old('city') }}" placeholder="City">
+</div> {{-- City --}}
 
-        <span class="input-group-addon flyer-label">
-            <label for="postcode"
-                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;Postcode:</label>
-        </span>
-        <input type="text" name="postcode" id="postcode"
-               class="form-control" value="{{ old('postcode') }}" required>
-    </div>
-</div> {{-- State and postcode --}}
+<div class="input-group group-field">
+    <label class="input-group-addon flyer-label" for="state">
+        <i class="fa fa-envelope-o fa-fw"></i>
+    </label>
 
-<div class="form-group group-field">
-    <div class="input-group">
-        <span class="input-group-addon flyer-label">
-            <label for="country"
-                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;Country:</label>
-        </span>
-        <select name="country" id="country" class="form-control form-field-2col">
-            {{--<option selected="Australia">Australia</option>--}}
-            @foreach($countries::all() as $country => $code)
-                @if($code=="au")
-                    <option selected="{{ $code }}">{{$country}}</option>
-                @else
-                    <option value="{{ $code }}">{{ $country }}</option>
-                @endif
-            @endforeach
-        </select>
+    <input type="text" name="state" id="state"
+           class="form-control" value="{{ old('state') }}" placeholder="State">
 
-        <span class="input-group-addon flyer-label">
-            <label for="price"
-                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;Price:</label>
-        </span>
-        <input type="text" name="price" id="price"
-               class="form-control" value="{{ old('price') }}" required>
-    </div>
+    <label class="input-group-addon flyer-label" for="postcode">
+        <i class="fa fa-map-marker"></i>
+    </label>
+    <input type="text" name="postcode" id="postcode"
+           class="form-control" value="{{ old('postcode') }}" placeholder="Postcode">
+</div> {{-- State and Postcode --}}
+
+<div class="input-group group-field">
+    <label class="input-group-addon flyer-label" for="country">
+        <i class="fa fa-chevron-circle-down"></i>
+    </label>
+
+    <select name="country" id="country" class="form-control">
+        {{--<option selected="Australia">Australia</option>--}}
+        @foreach($countries::all() as $country => $code)
+            @if($code=="au")
+                <option selected="{{ $code }}">{{$country}}</option>
+            @else
+                <option value="{{ $code }}">{{ $country }}</option>
+            @endif
+        @endforeach
+    </select>
+
+    <label class="input-group-addon flyer-label" for="price">
+        <i class="fa fa-usd"></i>
+    </label>
+    <input type="text" name="price" id="price"
+           class="form-control" value="{{ old('price') }}" placeholder="Price">
 </div> {{-- Country and Price --}}
 
-<div class="form-group group-field">
-    <div class="input-group">
-        <span class="input-group-addon flyer-label" style="vertical-align: top">
-            <label for="description"
-                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;Description:</label>
-        </span>
+<div class="input-group group-field">
+    <label for="description" class="input-group-addon flyer-label">
+        <i class="fa fa-file-text-o"></i>
+    </label>
         <textarea type="text" name="description" id="description"
-               class="form-control" rows="10" required>{{ old('description') }}</textarea>
-    </div>
+               class="form-control" rows="10" placeholder="Description">{{ old('description') }}</textarea>
 </div> {{-- Description --}}
 
-<div class="form-group group-field">
-    <div class="input-group">
-        <span class="input-group-addon flyer-label">
-            <label for="place"
-                   class="form-label glyphicon glyphicon-list-alt text-left">&nbsp;uk, fr, au</label>
-        </span>
-        <input type="text" name="place" id="place"
-               class="form-control" value="{{ old('place') }}" required>
-    </div>
-</div> {{-- city --}}
+<div class="input-group group-field">
+    <label for="place" class="input-group-addon flyer-label">
+        <i class="fa fa-chevron-circle-down"></i>
+    </label>
+    <select name="place" id="place" class="form-control">
+        <option value="uk">uk</option>
+        <option value="fr">fr</option>
+        <option value="au">au</option>
+    </select>
+</div> {{-- place --}}
 
 <div class="form-group" style="text-align: right">
     <button type="submit" class="btn btn-primary">Submit Request</button>

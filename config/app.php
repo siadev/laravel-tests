@@ -155,7 +155,6 @@ return [
         LaravelExamples\Providers\AuthServiceProvider::class,
         LaravelExamples\Providers\EventServiceProvider::class,
         LaravelExamples\Providers\RouteServiceProvider::class,
-
     ],
 
     /*

@@ -4,6 +4,7 @@ namespace LaravelExamples\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use LaravelExamples\cmsTemplate;
 use LaravelExamples\Http\Requests;
 use LaravelExamples\Http\Controllers\Controller;
 
@@ -16,17 +17,20 @@ class CmsTemplateController extends Controller
      */
     public function index()
     {
-        return view('cms_templates.index');
+        return view('cms_templates.templates_index');
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $name = $request->input('name');
+
+        return  view('cms_templates.templates_create', compact(['name']));
     }
 
     /**
@@ -37,7 +41,11 @@ class CmsTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        cmsTemplate::create($request->all());
+
+        flash()->overlay('Successfully saved' , 'If this is your first template,
+                                                 then you are able to create a page', 'Template Created');
+        return redirect()->back();
     }
 
     /**

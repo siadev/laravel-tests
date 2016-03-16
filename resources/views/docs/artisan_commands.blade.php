@@ -51,7 +51,7 @@
                     Note: You could have made Model and Migrate at the same time:
                 </summary>
                 <p>php artisan make:model Flyer --migration</p>
-                <summary class="doc-note">or</summary>
+                <summary>or</summary>
                 <p>php artisan make:model Flyer -m</p>
                 <p>php artisan make:model Photo</p>
                 <summary>Making a model and Migration at the same time <br>
@@ -65,6 +65,16 @@
                 <p>php artisan make:model cmsPage -m</p>
                 <p>php artisan make:model cmsTemplate -m</p>
                 <p>php artisan make:model cmsMenu -m</p>
+                <summary>
+                    Creating validation requests for forms. These files are saved to:
+                <pre>
+                /srv/www/NEWSITE/app/Http/Requests
+                </pre>
+                    create a request file for each form to
+                    break your code down to readable algorithm.
+                </summary>
+                <p>php artisan make:request FlyerRequest</p>
+                <p>php artisan make:request TemplateRequest</p>
             </div>
 
            <p>&nbsp;</p>

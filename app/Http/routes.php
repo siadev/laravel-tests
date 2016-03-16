@@ -52,6 +52,7 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     Route::get('/home', 'HomeController@index');
+    Route::get('cms', 'CmsDashController@dashboard');
 
     Route::resource('cms/templates', 'CmsTemplateController');
     Route::resource('cms/pages', 'CmsPageController');

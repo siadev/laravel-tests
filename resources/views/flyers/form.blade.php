@@ -48,9 +48,8 @@
     </label>
 
     <select name="country" id="country" class="form-control">
-        {{--<option selected="Australia">Australia</option>--}}
         @foreach($countries::all() as $country => $code)
-            @if($code=="au")
+            @if($code=="au")  // Make Australia the selected item.
                 <option selected="{{ $code }}">{{$country}}</option>
             @else
                 <option value="{{ $code }}">{{ $country }}</option>
@@ -86,4 +85,4 @@
 
 <div class="form-group" style="text-align: right">
     <button type="submit" class="btn btn-primary">Submit Request</button>
-</div>
+</div> {{-- Submit Button--}}

@@ -10,6 +10,10 @@
             <div class="panel-heading">Command Line installations and configurations</div>
             <div class="panel-body docs-info">
                 <div class="docs-cli">
+                    <summary>
+                        Change permissions of storage directory
+                    </summary>
+                    <p>sudo chmod -R 777 storage/</p>
                     <summary style="background-color: rgba(45, 74, 186, 0.88); color: white;">
                         <a href="https://nodejs.org/en/"><img src="/img/logos/nodejs.png"
                            alt="Nodejs" title="Nodejs" width="60px"></a>    <img src="/img/hspacer15.png">
